@@ -7,12 +7,28 @@
     -webkit-tap-highlight-color: transparent;
   }
 
+  html,
+  body {
+    overscroll-behavior: none;
+    -webkit-overflow-scrolling: touch;
+  }
+
   body {
     font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'SF Pro Text', 'Helvetica Neue', 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
     text-autospace: ideograph-alpha;
+    /* 防止 iOS 输入框聚焦时页面放大 */
+    font-size: 16px;
+  }
+
+  /* iOS 输入框缩放修复 */
+  input,
+  textarea,
+  select {
+    font-size: 16px;
+    -webkit-text-size-adjust: 100%;
   }
 
   :root {
